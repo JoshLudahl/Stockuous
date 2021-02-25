@@ -4,10 +4,12 @@ import android.graphics.Color.parseColor
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
@@ -39,17 +41,17 @@ fun Greeting(name: String) {
 @Composable
 fun Lists() {
     Row {
-        Column(modifier = Modifier.padding(16.dp)) {
+        Column(
+            modifier = Modifier
+                .padding(16.dp)
+                .fillMaxWidth(),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
             Greeting(name = "Android - C")
             Greeting(name = "World")
             Greeting(name = "Oregon")
         }
 
-        Column(modifier = Modifier.padding(16.dp)) {
-            Greeting(name = "Android - C")
-            Greeting(name = "World")
-            Greeting(name = "Oregon")
-        }
     }
 
 }
