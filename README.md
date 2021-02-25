@@ -1,0 +1,1 @@
+# Stockuous - A Stock data gathering tool using Jetpack Compose
